@@ -17,7 +17,7 @@
     <AssemblyTitle>Serial Debugger</AssemblyTitle>
     <Description>Simple, reliable serial port monitor</Description>
     <Company>Serial Debugger</Company>
-    <Copyright>Copyright © 2026</Copyright>
+    <Copyright>Copyright © 2026 Konstantinos Zoupalis</Copyright>
     <Version>1.1.0</Version>
   </PropertyGroup>
 

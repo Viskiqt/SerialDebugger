@@ -20,11 +20,11 @@ I made it because I don't like using Tera Term and similar programs for everyday
 
 ## Install
 
-Build the installer (see below), then run `dist\SerialDebugger-Setup.exe`.
+Download **SerialDebugger-Setup.exe** from the [latest release](https://github.com/Viskiqt/SerialDebugger/releases/latest) and run it.
 It installs for your Windows account only (no administrator rights needed), adds a Start menu shortcut,
-and can be removed from **Settings → Apps**.
+and can be removed from **Settings → Apps**. Running a newer setup updates it and keeps your settings.
 
-The installer isn't code-signed, so Windows SmartScreen may show a warning the first time you run it.
+The installer isn't code-signed, so Windows SmartScreen may warn you the first time. Click **More info → Run anyway**.
 
 ## Build
 
@@ -52,6 +52,10 @@ Reliability notes:
 - Incoming text is shown in batches every 40 ms and the output keeps the newest ~1 million characters,
   so the window stays responsive even at very high data rates.
 - Any line ending (`\r\n`, `\n`, `\r`) works; ANSI colour codes and invisible control bytes are removed.
+
+## License
+
+[MIT](LICENSE): free to use, change and share.
 
 ## About
 

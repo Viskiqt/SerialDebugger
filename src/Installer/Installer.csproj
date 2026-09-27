@@ -16,7 +16,7 @@
     <Product>Serial Debugger</Product>
     <AssemblyTitle>Serial Debugger Setup</AssemblyTitle>
     <Company>Serial Debugger</Company>
-    <Copyright>Copyright © 2026</Copyright>
+    <Copyright>Copyright © 2026 Konstantinos Zoupalis</Copyright>
     <Version>1.1.0</Version>
   </PropertyGroup>
 
