@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>SerialDebugger</RootNamespace>
+    <AssemblyName>SerialDebugger</AssemblyName>
+    <!-- Use the .NET Framework 4.8 targeting pack installed on this PC (no NuGet download) -->
+    <AutomaticallyUseReferenceAssemblyPackages>false</AutomaticallyUseReferenceAssemblyPackages>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+
+    <Product>Serial Debugger</Product>
+    <AssemblyTitle>Serial Debugger</AssemblyTitle>
+    <Description>Simple, reliable serial port monitor</Description>
+    <Company>Serial Debugger</Company>
+    <Copyright>Copyright © 2026</Copyright>
+    <Version>1.1.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <EmbeddedResource Include="App.ico" LogicalName="SerialDebugger.App.ico" />
+  </ItemGroup>
+
+</Project>

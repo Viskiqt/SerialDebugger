@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>SerialDebuggerSetup</RootNamespace>
+    <AssemblyName>SerialDebugger-Setup</AssemblyName>
+    <AutomaticallyUseReferenceAssemblyPackages>false</AutomaticallyUseReferenceAssemblyPackages>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <ApplicationIcon>..\SerialDebugger\App.ico</ApplicationIcon>
+    <!-- asInvoker manifest: stops Windows from auto-elevating an exe named "Setup" -->
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+
+    <Product>Serial Debugger</Product>
+    <AssemblyTitle>Serial Debugger Setup</AssemblyTitle>
+    <Company>Serial Debugger</Company>
+    <Copyright>Copyright © 2026</Copyright>
+    <Version>1.1.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+
+  <!-- Build the app first, then embed its output as the installer payload. -->
+  <ItemGroup>
+    <ProjectReference Include="..\SerialDebugger\SerialDebugger.csproj" ReferenceOutputAssembly="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="..\SerialDebugger\bin\$(Configuration)\net48\SerialDebugger.exe" LogicalName="payload.SerialDebugger.exe" />
+    <EmbeddedResource Include="..\SerialDebugger\bin\$(Configuration)\net48\SerialDebugger.exe.config" LogicalName="payload.SerialDebugger.exe.config" />
+    <EmbeddedResource Include="..\SerialDebugger\App.ico" LogicalName="App.ico" />
+  </ItemGroup>
+
+</Project>
